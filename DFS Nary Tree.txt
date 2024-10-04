@@ -1,7 +1,4 @@
-/*package whatever //do not write package name here */
-
 import java.io.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +13,7 @@ class Node {
 }
 
 public class NaryTreeDFS {
-    public List<Integer> dfs(Node root) {
+    public List<Integer> dfsTraversal(Node root) {
         List<Integer> result = new ArrayList<>();
         dfsHelper(root, result);
         return result;
@@ -41,7 +38,7 @@ public class NaryTreeDFS {
         root.children.get(0).children.add(new Node(6));
 
         NaryTreeDFS tree = new NaryTreeDFS();
-        List<Integer> result = tree.dfs(root);
-        System.out.println(result); // Output: [1, 2, 5, 6, 3, 4]
+        List<Integer> result = tree.dfsTraversal(root);
+        System.out.println(result); // Expected Output: [1, 2, 5, 6, 3, 4]
     }
 }
